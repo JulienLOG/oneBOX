@@ -1,5 +1,10 @@
 h1 {
-  color: blue;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
 }
 
 /*# sourceMappingURL=index.css.map */

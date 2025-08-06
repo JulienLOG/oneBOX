@@ -1,0 +1,10 @@
+// 👨‍🎨 Here master painter 👋 Define main font families used in the project
+
+@mixin font-primary($size, $weight, $color) {
+  font-family           : "Space Grotesk", sans-serif;
+  font-optical-sizing   : auto;
+  font-style            : normal;
+  font-size             : $size;
+  font-weight           : $weight;
+  color                 : $color;
+};
