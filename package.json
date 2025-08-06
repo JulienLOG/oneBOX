@@ -3,14 +3,15 @@
   "author": "JulienLOG on GitHub",
   "description": "Hello 👋 oneBOX is a minimalist React app for exploring advanced Hooks and component communication. Create a box, add it to the global box, and modify it with CRUD operations. A project to practice Hooks, events, data flow, and UI design via Figma.",
   "license": "GPL-3.0",
-  "private": true, 
+  "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sass": "sass /assets/styles/main.scss /assets/styles/index.css --watch"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -25,6 +26,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "sass": "^1.90.0",
     "vite": "^7.0.4"
   }
 }
