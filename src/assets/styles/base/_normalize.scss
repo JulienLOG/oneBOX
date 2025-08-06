@@ -1,0 +1,28 @@
+@use '../utils/utils_colors.scss' as utils_colors;
+@use '../fonts/fonts_family.scss' as fonts_family;
+@use '../fonts/fonts_weight.scss' as fonts_weight;
+@use '../fonts/fonts_size.scss' as fonts_size;
+
+*, *::before, *::after {
+  margin              : 0px;
+  padding             : 0px;
+  box-sizing          : border-box;
+  border              : 0px solid transparent;
+  outline             : 0px solid transparent;
+  list-style          : none;
+  text-decoration     : none;
+  background-color    : transparent;
+}
+
+html {
+  scroll-behavior       : smooth;
+}
+
+body, #root {
+  display             : flex;
+  flex-direction      : column;
+  width               : 100%;
+  min-height          : 100dvh;
+  background-color    : utils_colors.$mono-50;
+  @include            fonts_family.font-primary(fonts_size.$font-base, fonts_weight.$weight-base, utils_colors.$mono-900);
+}

@@ -1,7 +1,1 @@
-@use "./fonts/fonts_family.scss" as family;
-@use "./fonts/fonts_size.scss" as sizes;
-@use "./fonts/fonts_weight.scss" as weights;
-
-h1 {
-    @include family.font-primary(sizes.$font-xl, weights.$weight-xl, #000000)
-}
+@use "./base/normalize.scss";
