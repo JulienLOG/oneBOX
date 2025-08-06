@@ -1,0 +1,18 @@
+@use '../fonts/fonts_weight.scss' as fonts_weight;
+@use '../fonts/fonts_size.scss' as fonts_size;
+
+.titleMain {
+    display             : flex;
+    gap                 : 0.5rem;
+    align-items         : baseline;
+
+    & > h1 {
+        font-size       : fonts_size.$font-2xl;
+        font-weight     : fonts_weight.$weight-xl;
+    }
+
+    & > p {
+        font-size       : fonts_size.$font-lg;
+        font-weight     : fonts_weight.$weight-xl;
+    }
+}
