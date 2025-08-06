@@ -1,7 +1,10 @@
 {
   "name": "onebox",
-  "private": true,
-  "version": "0.0.0",
+  "author": "JulienLOG on GitHub",
+  "description": "Hello 👋 oneBOX is a minimalist React app for exploring advanced Hooks and component communication. Create a box, add it to the global box, and modify it with CRUD operations. A project to practice Hooks, events, data flow, and UI design via Figma.",
+  "license": "GPL-3.0",
+  "private": true, 
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
