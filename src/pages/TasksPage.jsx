@@ -1,12 +1,20 @@
+import { useState } from "react";
 import { taskModel } from "../models/taskModel.js";
 import styles from "../assets/styles/pages/tasksPage.module.scss";
 import AddTaskForm from "../components/AddTaskForm.jsx";
 
 export default function TasksPage() {
-    console.log( taskModel("hello"));
+
+    const [task, setTask] = useState([]);
+
+    const addNewTask = (newTask) => {
+        setTask([...task, taskModel(newTask)])
+    }
+    console.log(task)
+
     return (
         <div className={ styles.tasksPage }>
-            <AddTaskForm inputName="AddTask" inputPlaceholder="Add a new taks here ..." buttonText="Create" />
+            <AddTaskForm inputName="AddTask" inputPlaceholder="Add a new taks here ..." buttonText="Create" addNewTask={ addNewTask }/>
         </div>
     );
 };
