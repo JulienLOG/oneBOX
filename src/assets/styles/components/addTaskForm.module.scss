@@ -1,0 +1,64 @@
+@use '../utils/utils_colors.scss' as utils_colors;
+@use '../fonts/fonts_family.scss' as fonts_family;
+@use '../fonts/fonts_weight.scss' as fonts_weight;
+@use '../fonts/fonts_size.scss' as fonts_size;
+
+.addTaskForm {
+    position                : absolute;
+    display                 : flex;
+    justify-content         : center;
+    gap                     : 1rem;
+    width                   : 100%;
+    height                  : 3rem;
+
+    & > label {
+        position            : absolute;
+        inset               : 0px;
+        width               : 60%;
+        margin              : auto;
+        color               : transparent;
+        opacity             : 0;
+        cursor              : pointer;
+    }
+    
+    & > input {
+        width               : 40%;
+        height              : 100%;
+        padding-left        : 2rem;
+        background-color    : utils_colors.$mono-300;
+        font-size           : fonts_size.$font-base;
+        font-weight         : fonts_weight.$weight-xl;
+        transition          : border-bottom 200ms ease-in-out, background-color 200ms ease-in-out;
+
+        &::placeholder {
+            color           : utils_colors.$mono-600;
+            transition      : color 200ms ease-in-out;
+        }
+    }
+
+    & > button {
+        z-index                 : 1111;
+        height                  : 100%;
+        padding                 : 0px 2rem;
+        font-size               : fonts_size.$font-base;
+        font-weight             : fonts_weight.$weight-xl;
+        border                  : 4px solid transparent;
+        background-color        : utils_colors.$mono-300;
+        transition              : border 200ms ease-in-out, background-color 200ms ease-in-out;
+    }
+}
+
+.addTaskForm input:focus,  .addTaskForm input:hover { 
+    border-bottom               : 4px solid utils_colors.$mono-900;
+    background-color            : utils_colors.$mono-50;
+    color                       : utils_colors.$mono-900;
+
+    &::placeholder {
+        color                   : utils_colors.$mono-300;
+    }
+}
+
+.addTaskForm > button:active,  .addTaskForm > button:hover {
+    border                      : 4px solid utils_colors.$mono-900;
+    background-color            : utils_colors.$mono-50;
+}
