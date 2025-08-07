@@ -1,7 +1,14 @@
+@use '../utils/utils_colors.scss' as utils_colors;
 @use '../fonts/fonts_weight.scss' as fonts_weight;
 @use '../fonts/fonts_size.scss' as fonts_size;
 
 .buttonLink {
-    font-size       : fonts_size.$font-base;
-    font-weight     : fonts_weight.$weight-xl;
+    padding             : 1rem 0.5rem;
+    font-size           : fonts_size.$font-base;
+    font-weight         : fonts_weight.$weight-xl;
+    color               : utils_colors.$mono-900;
+
+    &__active {
+        border-bottom       : 4px solid utils_colors.$mono-900;
+    }
 }
