@@ -4,7 +4,28 @@
 @use '../fonts/fonts_size.scss' as fonts_size;
 
 .buttonCrud {
-    & > button {
-        @include fonts_family.font-primary(fonts_size.$font-base, fonts_weight.$weight-md, utils_colors.$mono-900);
+    display             : flex;
+    gap                 : 1rem;
+    align-items         : center;
+    width               : 100%;
+    padding             : 0.5rem 1rem;
+    background-color    : utils_colors.$mono-300;
+    transition          : background-color 0.25s ease;
+
+    & > span {
+        display             : inline-block;
+        width               : 4px;
+        height              : 4px;
+        background-color    : utils_colors.$mono-900;
+        color               : transparent;
+        transform           : rotate(45deg)
     }
+
+    & > button {
+        @include            fonts_family.font-primary(fonts_size.$font-base, fonts_weight.$weight-md, utils_colors.$mono-900);
+    }
+}
+
+.buttonCrud:hover {
+    background-color        : utils_colors.$mono-50;
 }
