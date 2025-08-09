@@ -2,14 +2,17 @@
 
 .taskItem {
     width                   : 100%;
-    max-height              : 3rem;
+    height                  : 48px;
+    max-height              : 48px;
     padding                 : 0px 1rem;
+    border-radius           : 2px;
+    border                  : 2px solid utils_colors.$mono-300;
     background-color        : utils_colors.$mono-300;
     line-height             : 3rem;
     text-overflow           : ellipsis;
     overflow                : hidden;
     white-space             : nowrap;
-    transition              : all 0.25s ease;
+    transition              : all 0.2s ease;
 
     &:hover { 
         max-height              : 100vh;
@@ -17,4 +20,9 @@
         overflow                : visible;
         white-space             : normal;
     }
+}
+
+.taskItem__isOpen {
+    border                      : 2px solid utils_colors.$mono-300;
+    background-color            : utils_colors.$mono-50;
 }

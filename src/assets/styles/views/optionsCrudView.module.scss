@@ -1,6 +1,10 @@
 @use "../utils/utils_colors.scss" as utils_colors;
 
 .optionsCrudView {
+    position            : absolute;
+    top                 : 0px;
+    right               : 0px;
+    transform           : translateX(120px);
     display             : flex;
     gap                 : 1rem;
     flex-direction      : column;

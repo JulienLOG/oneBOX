@@ -1,6 +1,6 @@
 @use '../utils/utils_colors.scss' as utils_colors;
 
-.buttonTask {
+.buttonOpenOption {
     display                 : flex;
     gap                     : 0.75rem;
     justify-content         : center;
@@ -30,7 +30,7 @@
     }
 }
 
-.buttonTask:hover {
+.buttonOpenOption:hover, .buttonOpenOption__isOpen {
     border                  : 2px solid utils_colors.$mono-300;
     background-color        : utils_colors.$mono-50;
 }

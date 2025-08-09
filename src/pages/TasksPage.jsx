@@ -4,9 +4,6 @@ import styles from "../assets/styles/pages/tasksPage.module.scss";
 import AddTaskForm from "../components/AddTaskForm.jsx";
 import TasksContainerView from "../views/TasksContainerView.jsx";
 import TaskItemView from "../views/TaskItemView.jsx";
-import TaskItem from "../components/TaskItem.jsx";
-import ButtonTask from "../components/ButtonTask.jsx";
-import OptionsCrudView from "../views/OptionsCrudView.jsx";
 
 export default function TasksPage() {
 
@@ -21,11 +18,7 @@ export default function TasksPage() {
         <div className={ styles.tasksPage }>
             <TasksContainerView>
                 { task.length !== 0 ? task.map((itt) => (
-                    <TaskItemView key={itt.id}>
-                        <TaskItem text={itt.content} />
-                            <ButtonTask />
-                        <OptionsCrudView />
-                    </TaskItemView> 
+                    <TaskItemView key={itt.id} text={ itt.content }/>
                     )) : <p>Task not found, create a task ! ✍️</p>
                 }
             </TasksContainerView>
