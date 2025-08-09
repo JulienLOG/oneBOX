@@ -1,0 +1,10 @@
+@use "../utils/utils_colors.scss" as utils_colors;
+
+.optionsCrudView {
+    display             : flex;
+    gap                 : 1rem;
+    flex-direction      : column;
+    padding             : 1rem;
+    border-radius       : 0.25rem;
+    background-color    : utils_colors.$mono-300;
+}

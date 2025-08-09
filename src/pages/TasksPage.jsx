@@ -6,7 +6,7 @@ import TasksContainerView from "../views/TasksContainerView.jsx";
 import TaskItemView from "../views/TaskItemView.jsx";
 import TaskItem from "../components/TaskItem.jsx";
 import ButtonTask from "../components/ButtonTask.jsx";
-import ButtonCrud from "../components/ButtonCrud.jsx";
+import OptionsCrudView from "../views/OptionsCrudView.jsx";
 
 export default function TasksPage() {
 
@@ -23,6 +23,7 @@ export default function TasksPage() {
                 <TaskItemView>
                     <TaskItem text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
                     <ButtonTask />
+                    <OptionsCrudView />
                 </TaskItemView>
                 <TaskItemView>
                     <TaskItem text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
@@ -35,7 +36,6 @@ export default function TasksPage() {
                     <ButtonTask />
                 </TaskItemView>
             </TasksContainerView>
-            <ButtonCrud option="delete" />
             <AddTaskForm inputName="AddTask" inputPlaceholder="Add a new taks here ..." buttonText="Create" addNewTask={ addNewTask }/>
         </div>
     );
