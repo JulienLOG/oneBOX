@@ -1,7 +1,7 @@
 @use '../utils/utils_colors.scss' as utils_colors;
 
 .taskItem {
-    width                   : 60%;
+    width                   : 100%;
     max-height              : 3rem;
     padding                 : 0px 1rem;
     background-color        : utils_colors.$mono-300;
