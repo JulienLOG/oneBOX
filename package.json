@@ -11,7 +11,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "sass": "sass /assets/styles/main.scss /assets/styles/index.css --watch"
+    "sass": "sass ./src/assets/styles/main.scss ../src/assets/styles/index.css --watch"
   },
   "dependencies": {
     "react": "^19.1.0",

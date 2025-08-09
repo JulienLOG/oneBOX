@@ -1,0 +1,20 @@
+@use '../utils/utils_colors.scss' as utils_colors;
+
+.taskItem {
+    width                   : 60%;
+    max-height              : 3rem;
+    padding                 : 0px 1rem;
+    background-color        : utils_colors.$mono-300;
+    line-height             : 3rem;
+    text-overflow           : ellipsis;
+    overflow                : hidden;
+    white-space             : nowrap;
+    transition              : all 0.25s ease;
+
+    &:hover { 
+        max-height              : 100vh;
+        text-overflow           : clip;
+        overflow                : visible;
+        white-space             : normal;
+    }
+}
