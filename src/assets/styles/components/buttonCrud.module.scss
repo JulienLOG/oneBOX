@@ -1,0 +1,10 @@
+@use '../fonts/fonts_family.scss' as fonts_family;
+@use '../utils/utils_colors.scss' as utils_colors;
+@use '../fonts/fonts_weight.scss' as fonts_weight;
+@use '../fonts/fonts_size.scss' as fonts_size;
+
+.buttonCrud {
+    & > button {
+        @include fonts_family.font-primary(fonts_size.$font-base, fonts_weight.$weight-md, utils_colors.$mono-900);
+    }
+}
