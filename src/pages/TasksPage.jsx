@@ -17,15 +17,19 @@ export default function TasksPage() {
     console.log(task)
 
     return (
-        <div className={ styles.tasksPage }>
-            <ButtonLinkArrow path="/" img={ arrowTop } text="Return Top" position="top"/>
-            <TasksContainerView>
-                { task.length !== 0 ? task.map((itt) => (
-                    <TaskItemView key={itt.id} text={ itt.content }/>
+        <main className={ styles.tasksPage }>
+            <div>
+                <ButtonLinkArrow path="/" img={ arrowTop } text="Return Top" position="top"/>
+            </div>
+            <div>
+                <TasksContainerView>
+                    { task.length !== 0 ? task.map((itt) => (
+                        <TaskItemView key={itt.id} text={ itt.content }/>
                     )) : <p>Task not found, create a task ! ✍️</p>
                 }
-            </TasksContainerView>
+                </TasksContainerView>
+            </div>
             <AddTaskForm inputName="AddTask" inputPlaceholder="Add a new taks here ..." buttonText="Create" addNewTask={ addNewTask }/>
-        </div>
+        </main>
     );
 };

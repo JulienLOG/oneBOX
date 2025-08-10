@@ -1,6 +1,22 @@
 .tasksPage {
-    display             : flex;
-    flex-direction      : column;
-    align-items         : center;
+    position            : relative;
     flex                : 1;
+    display             : flex;
+    flex-direction      : column; 
+    padding-bottom      : 4rem;
+
+
+  & > :nth-child(1) {
+        flex-basis      : 30%;  
+        width           : 100%;
+        padding-top     : 10rem;
+    }
+
+  & > :nth-child(2) {
+        flex-basis          : 70%;  
+        display             : flex;
+        justify-content     : center;
+        width               : 100%;  
+        padding             : 4rem;
+    }
 }
