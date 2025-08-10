@@ -1,0 +1,43 @@
+@use '../utils/utils_colors.scss' as utils_colors;
+@use '../fonts/fonts_family.scss' as fonts_family;
+@use '../fonts/fonts_weight.scss' as fonts_weight;
+@use '../fonts/fonts_size.scss' as fonts_size;
+
+.buttonLinkArrow {
+    display         : flex;
+    gap             : 1rem;
+    @include        fonts_family.font-primary(fonts_size.$font-base, fonts_weight.$weight-md, utils_colors.$mono-900);
+    
+    & > img {
+        width       : 24px;
+        height      : 24px;
+        object-fit  : contain;
+    }
+    
+    & > span {
+        height              : 32px;
+        border-bottom       : 4px solid transparent;
+        transition          : border-bottom 0.25s ease;
+    }
+}
+
+.buttonLinkArrow:hover > span {
+    border-bottom           : 4px solid utils_colors.$mono-900;
+}
+
+.buttonLinkArrow__position--top {
+    flex-direction          : column;
+    align-items             : center;
+}
+
+.buttonLinkArrow__position--bottom {
+    flex-direction          : column-reverse;
+}
+
+.buttonLinkArrow__position--right {
+    flex-direction          : row;
+}
+
+.buttonLinkArrow__position--left {
+    flex-direction          : row-reverse;
+}
