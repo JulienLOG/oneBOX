@@ -26,12 +26,15 @@
 }
 
 .buttonLinkArrow__position--top {
+    width                   : 10rem;
     flex-direction          : column;
     align-items             : center;
 }
 
 .buttonLinkArrow__position--bottom {
+    width                   : 10rem;
     flex-direction          : column-reverse;
+    align-items             : center;
 }
 
 .buttonLinkArrow__position--right {
