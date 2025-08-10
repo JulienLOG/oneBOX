@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "../assets/styles/views/taskItemView.module.scss";
+import ButtonDoneCube from "../components/ButtonDoneCube.jsx";
 import TaskItem from "../components/TaskItem.jsx";
 import ButtonOpenOption from "../components/ButtonOpenOption.jsx";
 import OptionsCrudView from "../views/OptionsCrudView.jsx";
@@ -11,6 +12,7 @@ export default function TaskItemView({ id, text, deleteTask }) {
 
     return (
         <li className={ styles.taskItemView }>
+            <ButtonDoneCube />
             <TaskItem text={ text } handleToggle={ isOpen }/>
             <ButtonOpenOption isOpen={ isOpen } handleToggle={ handleToggle } />
             { isOpen && <OptionsCrudView id={ id } deleteTask={ deleteTask }/>}
