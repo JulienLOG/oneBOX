@@ -1,11 +1,12 @@
 import styles from "../assets/styles/components/buttonCrud.module.scss";
 
-export default function ButtonCrud({ option, handleClick }) {
+export default function ButtonCrud({ img, option, handleClick }) {
 
     return (
-        <li className={ styles.buttonCrud }>   
+        <li className={ styles.buttonCrud } onClick={ handleClick }>   
             <span>puce</span> 
-            <button name={ option } onClick={ handleClick }>{ option }</button>
+            <img src={ img } alt={`${ option } task !`} />
+            <button name={ option }>{ option }</button>
         </li>
     );
 };

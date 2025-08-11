@@ -5,10 +5,10 @@
 
 .buttonCrud {
     display             : flex;
-    gap                 : 1rem;
+    gap                 : 0.5rem;
     align-items         : center;
     width               : 100%;
-    padding             : 0.5rem 1rem;
+    padding             : 0.5rem 2rem 0.5rem 1rem;
     border-radius       : 2px;
     background-color    : utils_colors.$mono-300;
     transition          : background-color 0.25s ease;
@@ -17,14 +17,23 @@
         display             : inline-block;
         width               : 4px;
         height              : 4px;
-        background-color    : utils_colors.$mono-900;
+        background-color    : utils_colors.$mono-800;
         color               : transparent;
         transform           : rotate(45deg)
     }
 
-    & > button {
-        @include            fonts_family.font-primary(fonts_size.$font-base, fonts_weight.$weight-md, utils_colors.$mono-900);
+    & > img {
+        width               : 14px;
+        height              : 14px
     }
+
+    & > button {
+        @include            fonts_family.font-primary(fonts_size.$font-base, fonts_weight.$weight-md, utils_colors.$mono-800);
+    }
+}
+
+.buttonCrud, span, img, button {
+    cursor                  : pointer;
 }
 
 .buttonCrud:hover {
