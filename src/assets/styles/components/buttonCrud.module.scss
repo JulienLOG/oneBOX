@@ -11,9 +11,11 @@
     padding             : 0.5rem 2rem 0.5rem 1rem;
     border-radius       : 2px;
     background-color    : utils_colors.$mono-300;
+    @include            fonts_family.font-primary(fonts_size.$font-base, fonts_weight.$weight-md, utils_colors.$mono-800);
     transition          : background-color 0.25s ease;
+    cursor              : pointer;
 
-    & > span {
+    & > :nth-child(1) {
         display             : inline-block;
         width               : 4px;
         height              : 4px;
@@ -26,14 +28,6 @@
         width               : 14px;
         height              : 14px
     }
-
-    & > button {
-        @include            fonts_family.font-primary(fonts_size.$font-base, fonts_weight.$weight-md, utils_colors.$mono-800);
-    }
-}
-
-.buttonCrud, span, img, button {
-    cursor                  : pointer;
 }
 
 .buttonCrud:hover {

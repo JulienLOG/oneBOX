@@ -17,13 +17,13 @@ export default function OptionsCrudView({ id, isOpen, handleToggle, doneTask, ed
 
     return (
         <ul className={ styles.optionsCrudView }>
-            <div>
+            <li>
                 <ButtonClose img={ btnClose } text="Close" handleClose={ handleClose } />
-            </div>
-            <div>
+            </li>
+            <li>
                 {
                     updateSelect === true
-                        ? (
+                        ? (        
                             <>
                                 <ButtonCrud handleClick={ () => doneTask(id) } img={ btnSave } option="save" />
                                 <ButtonCrud handleClick={ () => editTask(id) } img={ btnBack } option="cancel" />
@@ -36,7 +36,7 @@ export default function OptionsCrudView({ id, isOpen, handleToggle, doneTask, ed
                             </>
                         )
                 }
-            </div>
+            </li>
         </ul>
     );
 };

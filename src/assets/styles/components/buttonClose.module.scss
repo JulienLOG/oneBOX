@@ -11,8 +11,9 @@
     border-radius           : 2px;
     border                  : 2px solid utils_colors.$mono-300;
     background-color        : utils_colors.$mono-300;
-    transition              : background-color 0.25s ease;
     @include                fonts_family.font-primary(fonts_size.$font-2xs, fonts_weight.$weight-xl, utils_colors.$mono-800);
+    transition              : background-color 0.25s ease;
+    cursor                  : pointer;
 }
 
 .buttonClose:hover {
