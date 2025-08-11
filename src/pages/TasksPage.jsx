@@ -14,6 +14,7 @@ export default function TasksPage() {
     const addNewTask = newTask => setTask([...task, taskModel(newTask)]);
     const doneTask = id => setTask(tasks => tasks.map(itt => itt.id === id ? ({ ...itt, done: !itt.done }) : itt));
     const editTask = id => setTask(tasks => tasks.map(itt => itt.id === id ? ({ ...itt, edit: !itt.edit }) : itt));
+    const updateTask = (id, content) => setTask(tasks => tasks.map(itt => itt.id === id ? ({...itt, content: content}) : itt));
     const deleteTask = id => setTask([...task].filter( itt => id !== itt.id ));
     console.log(task);
 
@@ -25,7 +26,7 @@ export default function TasksPage() {
             <div>
                 <TasksContainerView>
                     { task.length !== 0 ? task.map((itt) => (
-                        <TaskItemView key={itt.id} id={ itt.id } text={ itt.content } doneTask={ doneTask } edit={ itt.edit } editTask={ editTask } deleteTask={ deleteTask }/>
+                        <TaskItemView key={itt.id} id={ itt.id } text={ itt.content } doneTask={ doneTask } edit={ itt.edit } editTask={ editTask } updateTask={ updateTask } deleteTask={ deleteTask }/>
                     )) : <p>Task not found, create a task ! ✍️</p>
                 }
                 </TasksContainerView>
