@@ -6,12 +6,14 @@ import btnBin from "../assets/images/btnBin.svg";
 import ButtonClose from "../components/ButtonClose.jsx";
 import ButtonCrud from "../components/ButtonCrud.jsx";
 
-export default function OptionsCrudView({ id, doneTask, editTask, deleteTask }) {
-
+export default function OptionsCrudView({ id, isOpen, handleToggle, doneTask, editTask, deleteTask }) {
+    
+    const handleClose = (e) => e && handleToggle(!isOpen);
+    
     return (
         <ul className={ styles.optionsCrudView }>
             <div>
-                <ButtonClose img={ btnClose } text="Close" />
+                <ButtonClose img={ btnClose } text="Close" handleClose={ handleClose } />
             </div>
             <div>
                 <ButtonCrud handleClick={ () => doneTask(id) } img={ btnCheck } option="validate" />

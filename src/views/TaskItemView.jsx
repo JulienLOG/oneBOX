@@ -12,6 +12,8 @@ export default function TaskItemView({ id, text, doneTask, edit, editTask, updat
     const handleToggle = (bool) => setIsOpen(bool);
     const handleChange = e => e && updateTask(id, e.target.value);
     console.log("Edit :", edit)
+    console.log("IsOpen :", isOpen)
+
 
     return (
         <li className={ styles.taskItemView }>
@@ -22,7 +24,17 @@ export default function TaskItemView({ id, text, doneTask, edit, editTask, updat
                 : <TaskItem text={ text } handleToggle={ isOpen }/>
             }
             <ButtonOpenOption isOpen={ isOpen } handleToggle={ handleToggle } />
-            { isOpen && <OptionsCrudView id={ id } deleteTask={ deleteTask } editTask={ editTask } doneTask={ doneTask }/>}
+            { 
+                isOpen 
+                    && <OptionsCrudView 
+                            id={ id } 
+                            isOpen={ isOpen } 
+                            handleToggle={ handleToggle } 
+                            deleteTask={ deleteTask } 
+                            editTask={ editTask } 
+                            doneTask={ doneTask } 
+                        />
+            }
         </li>
     );
 };
