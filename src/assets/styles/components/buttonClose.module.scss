@@ -9,13 +9,12 @@
     gap                     : 0.5rem;
     padding                 : 4px 1rem 4px 4px;
     border-radius           : 2px;
+    border                  : 2px solid utils_colors.$mono-300;
     background-color        : utils_colors.$mono-300;
-    transition              : background-color 0.25s ease, color 0.25s ease;
+    transition              : background-color 0.25s ease;
     @include                fonts_family.font-primary(fonts_size.$font-2xs, fonts_weight.$weight-xl, utils_colors.$mono-800);
 }
 
 .buttonClose:hover {
-    background-color        : utils_colors.$mono-800;
-    color                   : utils_colors.$mono-50;
-
+    background-color        : utils_colors.$mono-50;
 }
