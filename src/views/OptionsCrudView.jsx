@@ -1,13 +1,13 @@
 import styles from "../assets/styles/views/optionsCrudView.module.scss";
 import ButtonCrud from "../components/ButtonCrud.jsx";
 
-export default function OptionsCrudView({ id, deleteTask }) {
-    
-    const options = ["validate", "update", "delete"];
+export default function OptionsCrudView({ id, deleteTask, doneTask }) {
 
     return (
         <ul className={ styles.optionsCrudView }>
-            { options.map( itt => <ButtonCrud key={ itt } handleClick={ itt === "delete" ? () => deleteTask(id) : undefined } option={ itt } />) }
+            <ButtonCrud handleClick={ () => doneTask(id) } option="validate" />
+            <ButtonCrud handleClick={ () => deleteTask(id) } option="delete" />
+            <ButtonCrud handleClick={ () => console.log("Click option update !") } option="update" />
         </ul>
     );
 };

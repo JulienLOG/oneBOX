@@ -5,8 +5,8 @@ import TaskItem from "../components/TaskItem.jsx";
 import ButtonOpenOption from "../components/ButtonOpenOption.jsx";
 import OptionsCrudView from "../views/OptionsCrudView.jsx";
 
-export default function TaskItemView({ id, text, deleteTask }) {
-    
+export default function TaskItemView({ id, text, deleteTask, doneTask }) {
+
     const [isOpen, setIsOpen] = useState(false);
     const handleToggle = (bool) => setIsOpen(bool);
 
@@ -15,7 +15,7 @@ export default function TaskItemView({ id, text, deleteTask }) {
             <ButtonDoneCube />
             <TaskItem text={ text } handleToggle={ isOpen }/>
             <ButtonOpenOption isOpen={ isOpen } handleToggle={ handleToggle } />
-            { isOpen && <OptionsCrudView id={ id } deleteTask={ deleteTask }/>}
+            { isOpen && <OptionsCrudView id={ id } deleteTask={ deleteTask } doneTask={ doneTask }/>}
         </li>
     );
 };

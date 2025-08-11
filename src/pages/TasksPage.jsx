@@ -12,9 +12,10 @@ export default function TasksPage() {
     const [task, setTask] = useState([]);
 
     const addNewTask = newTask => setTask([...task, taskModel(newTask)]);
+    const doneTask = id => setTask(tasks => tasks.map(itt => itt.id === id ? ({ ...itt, done: !itt.done }) : itt));
     const deleteTask = id => setTask([...task].filter( itt => id !== itt.id ));
+    console.log(task);
 
-    console.log(task)
     return (
         <main className={ styles.tasksPage }>
             <div>
@@ -23,7 +24,7 @@ export default function TasksPage() {
             <div>
                 <TasksContainerView>
                     { task.length !== 0 ? task.map((itt) => (
-                        <TaskItemView key={itt.id} id={ itt.id } text={ itt.content } deleteTask={ deleteTask }/>
+                        <TaskItemView key={itt.id} id={ itt.id } text={ itt.content } doneTask={ doneTask } deleteTask={ deleteTask }/>
                     )) : <p>Task not found, create a task ! ✍️</p>
                 }
                 </TasksContainerView>
