@@ -6,18 +6,22 @@ import UpdateTaskForm from "../components/updateTaskForm.jsx";
 import ButtonOpenOption from "../components/ButtonOpenOption.jsx";
 import OptionsCrudView from "../views/OptionsCrudView.jsx";
 
-export default function TaskItemView({ id, text, deleteTask, doneTask }) {
+export default function TaskItemView({ id, text, doneTask, edit, editTask, deleteTask }) {
 
     const [isOpen, setIsOpen] = useState(false);
     const handleToggle = (bool) => setIsOpen(bool);
-
+    console.log("Edit :", edit)
+    
     return (
         <li className={ styles.taskItemView }>
             <ButtonDoneCube />
-            <TaskItem text={ text } handleToggle={ isOpen }/>
-            <UpdateTaskForm inputName="updateInput" inputPlaceholder="Update task" updateTask={null}/>
+            { 
+                edit === true 
+                ? <UpdateTaskForm inputName="updateInput" inputPlaceholder="Update task" updateTask={null}/> 
+                : <TaskItem text={ text } handleToggle={ isOpen }/>
+            }
             <ButtonOpenOption isOpen={ isOpen } handleToggle={ handleToggle } />
-            { isOpen && <OptionsCrudView id={ id } deleteTask={ deleteTask } doneTask={ doneTask }/>}
+            { isOpen && <OptionsCrudView id={ id } deleteTask={ deleteTask } editTask={ editTask } doneTask={ doneTask }/>}
         </li>
     );
 };
