@@ -1,0 +1,29 @@
+@use '../utils/utils_colors.scss' as utils_colors;
+
+.updateTaskForm {
+    position            : relative;
+    width               : 100%;
+    height              : 48px;
+
+    & > label {
+        position            : absolute;
+        inset               : 0px;
+        width               : 100%;
+        color               : transparent;
+        opacity             : 0;
+        cursor              : pointer;
+    }
+
+    & > input {
+        width               : 100%;
+        height              : 100%;
+        padding-left        : 2rem;
+        border-radius       : 2px;
+        border              : 2px solid utils_colors.$mono-300;
+        background-color    : utils_colors.$mono-50;
+    
+        &::placeholder {
+            color           : utils_colors.$mono-600;
+        }
+    }
+}
