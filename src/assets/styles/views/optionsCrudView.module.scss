@@ -1,14 +1,12 @@
 @use "../utils/utils_colors.scss" as utils_colors;
 
 .optionsCrudView {
-    position            : absolute;
-    top                 : 0px;
-    right               : 0px;
-    transform           : translateX(120px);
     display             : flex;
-    gap                 : 1rem;
+    gap                 : 0.5rem;
     flex-direction      : column;
-    border-radius       : 0.25rem;
-    border              : 2px solid utils_colors.$mono-300;
-    background-color    : utils_colors.$mono-300;
+
+    & > :nth-child(2) {
+        border-radius   : 2px;
+        border          : 2px solid utils_colors.$mono-300;
+    }
 }

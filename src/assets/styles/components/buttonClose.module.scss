@@ -1,0 +1,21 @@
+@use '../fonts/fonts_family.scss' as fonts_family;
+@use '../utils/utils_colors.scss' as utils_colors;
+@use '../fonts/fonts_weight.scss' as fonts_weight;
+@use '../fonts/fonts_size.scss' as fonts_size;
+
+.buttonClose {
+    display                 : flex;
+    align-items             : center;
+    gap                     : 0.5rem;
+    padding                 : 4px 1rem 4px 4px;
+    border-radius           : 2px;
+    background-color        : utils_colors.$mono-300;
+    transition              : background-color 0.25s ease, color 0.25s ease;
+    @include                fonts_family.font-primary(fonts_size.$font-2xs, fonts_weight.$weight-xl, utils_colors.$mono-800);
+}
+
+.buttonClose:hover {
+    background-color        : utils_colors.$mono-800;
+    color                   : utils_colors.$mono-50;
+
+}
