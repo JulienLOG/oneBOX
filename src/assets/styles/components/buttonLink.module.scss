@@ -1,14 +1,15 @@
-@use '../utils/utils_colors.scss' as utils_colors;
-@use '../fonts/fonts_weight.scss' as fonts_weight;
-@use '../fonts/fonts_size.scss' as fonts_size;
+@use "../utils/utils_shadow.scss" as utils_shadow;
+@use "../utils/utils_colors.scss" as utils_colors;
+@use "../fonts/fonts_weight.scss" as fonts_weight;
+@use "../fonts/fonts_size.scss" as fonts_size;
 
 .buttonLink {
-    padding             : 1rem 0.5rem;
-    font-size           : fonts_size.$font-base;
-    font-weight         : fonts_weight.$weight-xl;
-    color               : utils_colors.$mono-900;
-
-    &__active {
-        border-bottom       : 4px solid utils_colors.$mono-900;
-    }
+    display             : flex;
+    gap                 : 1rem;
+    padding             : 8px 8px 8px 16px;
+    border-radius       : 8px;
+    border              : 2px solid utils_colors.$mono-50;
+    background-color    : utils_colors.$mono-800;
+    color               : utils_colors.$mono-50;
+    @include            utils_shadow.shadow-btn(utils_colors.$mono-800);
 }

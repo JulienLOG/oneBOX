@@ -1,9 +1,11 @@
 import { NavLink } from "react-router";
 import styles from "../assets/styles/components/buttonLink.module.scss";
 
-export default function ButtonLink({ path, text }) {
+export default function ButtonLink({ path, text, children }) {
 
     return (
-        <NavLink className={ ({ isActive }) => isActive ? `${styles.buttonLink} ${styles.buttonLink__active}` : styles.buttonLink } to={ path }>{ text }</NavLink>
+        <NavLink className={ styles.buttonLink } to={ path }>
+            { text }{ children }
+        </NavLink>
     );
 };
