@@ -38,9 +38,9 @@
 }
 
 .buttonLinkArrow__position--right {
-    flex-direction          : row;
+    flex-direction          : row-reverse;
 }
 
 .buttonLinkArrow__position--left {
-    flex-direction          : row-reverse;
+    flex-direction          : row;
 }
