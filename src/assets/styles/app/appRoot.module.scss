@@ -1,5 +1,8 @@
+@use "../utils/utils_colors.scss" as utils_colors;
+
 .appRoot {
     display             : flex;
     flex                : 1;
     flex-direction      : column;
+    background-color    : utils_colors.$mono-200;
 }
