@@ -1,0 +1,64 @@
+@use "../utils/utils_colors.scss" as utils_colors;
+@use "../utils/utils_shadow.scss" as utils_shadow;
+
+
+.cubeContainer {
+    position            : relative;
+    display             : flex;
+    flex                : 1;
+    perspective         : 800px;
+    
+    & > div {
+        position                : absolute;
+        top                     : 50%;
+        left                    : 50%;
+        transform               : translate(-50%, -50%) rotateZ(270deg) rotateX(270deg) rotateY(0deg);
+        width                   : 17.5rem;
+        height                  : 17.5rem;
+        transform-style         : preserve-3d;
+        animation               : rotateCube 20s infinite alternate;
+        animation-play-state    : running;
+    }
+}
+
+.cubeContainer--top, .cubeContainer--bottom, .cubeContainer--front, .cubeContainer--back, .cubeContainer--left, .cubeContainer--right {
+    position        : absolute;
+    inset           : 0px;
+    width           : 100%;
+    height          : 100%;
+    border          : 4px dashed utils_colors.$mono-800;
+    @include        utils_shadow.shadow-glass(utils_colors.$mono-50)
+}
+
+.cubeContainer--top {
+    transform           : rotateX(90deg) translateZ(8.75rem);
+}
+.cubeContainer--bottom {
+    transform           : rotateX(90deg) translateZ(-8.75rem);
+}
+.cubeContainer--front {
+    transform           : translateZ(8.75rem);
+}
+.cubeContainer--back {
+    transform           : translateZ(-8.75rem);
+
+}
+.cubeContainer--left {
+    transform           : rotateY(90deg) translateZ(8.75rem);
+}
+.cubeContainer--right {
+    transform           : rotateY(90deg) translateZ(-8.75rem);
+}
+
+.cubeContainer:hover > div {
+    animation-play-state    : paused;
+}
+
+@keyframes rotateCube {
+    0% {
+        transform           : translate(-50%, -50%) rotateZ(15deg) rotateX(120deg) rotateY(30deg);
+    }
+    100% {
+        transform           : translate(-50%, -50%) rotateZ(30deg) rotateX(180deg) rotateY(60deg);
+    }
+}

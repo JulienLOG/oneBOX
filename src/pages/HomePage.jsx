@@ -4,11 +4,15 @@ import btnArrowLeft from "../assets/images/btnArrowLeft.svg";
 import btnArrowRight from "../assets/images/btnArrowRight.svg";
 import btnArrowBottom from "../assets/images/btnArrowBottom.svg";
 import SectionContent from "../components/SectionContent.jsx";
+import CubeContainer from "../components/CubeContainer.jsx";
 
 export default function HompePage({ children }) { 
 
     return (
         <main className={ styles.homePage }>
+            <div>
+                <CubeContainer />
+            </div>
             <SectionContent title="Welcome" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam." />
             <nav>
                 <div>
