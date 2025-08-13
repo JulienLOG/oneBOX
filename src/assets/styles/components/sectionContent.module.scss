@@ -1,0 +1,13 @@
+.sectionContent {
+    max-width: 320px;
+
+    & > h2 {
+        width: 0px;
+        height: 0px;
+        color: transparent;
+    }
+
+    & > p {
+        line-height: 2rem;
+    }
+}

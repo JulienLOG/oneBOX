@@ -3,11 +3,13 @@ import ButtonLinkArrow from "../components/ButtonLinkArrow.jsx";
 import btnArrowLeft from "../assets/images/btnArrowLeft.svg";
 import btnArrowRight from "../assets/images/btnArrowRight.svg";
 import btnArrowBottom from "../assets/images/btnArrowBottom.svg";
+import SectionContent from "../components/SectionContent.jsx";
 
 export default function HompePage({ children }) { 
 
     return (
         <main className={ styles.homePage }>
+            <SectionContent title="Welcome" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam." />
             <nav>
                 <div>
                     <ButtonLinkArrow path="/about" img={ btnArrowLeft } text="about" position="left"/>
