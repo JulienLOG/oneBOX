@@ -13,7 +13,7 @@ export default function NavHeaderView() {
         <nav className={ styles.navHeaderView }>
             { routes.map((itt, index) => 
                 <ButtonLink key={ index } path={ itt.name } text={ itt.name }>
-                    <ButtonKbd text={ itt.touch }/>
+                    <ButtonKbd text={ itt.touch } styleMode="white" />
                 </ButtonLink>
             )}
         </nav>

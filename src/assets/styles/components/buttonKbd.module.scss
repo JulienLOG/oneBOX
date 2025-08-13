@@ -3,19 +3,24 @@
 @use "../fonts/fonts_size.scss" as fonts_size;
 
 .buttonKbd {
-    padding: 0px 4px;
-    border-radius: 4px;
-    background-color: utils_colors.$mono-800;
-    color: utils_colors.$mono-50;
+    padding                 : 0px 4px;
+    border-radius           : 4px;
+    background-color        : utils_colors.$mono-800;
+    color                   : utils_colors.$mono-50;
     
     & > :first-child, & > :last-child { 
-        font-family: sans-serif;
-        line-height: 18px;
-        font-size: fonts_size.$font-xs;
-        font-weight: fonts_weight.$weight-base;
+        font-family         : sans-serif;
+        line-height         : 18px;
+        font-size           : fonts_size.$font-xs;
+        font-weight         : fonts_weight.$weight-base;
     }
 
      & > :last-child { 
-        padding: 1px;
+        padding             : 1px;
     }
+}
+
+.buttonKbdWhite {
+    background-color        : utils_colors.$mono-50;
+    color                   : utils_colors.$mono-800;
 }
