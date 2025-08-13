@@ -13,8 +13,8 @@
     }
 
     & > p {
-        font-size       : fonts_size.$font-lg;
-        font-weight     : fonts_weight.$weight-xl;
+        font-size       : fonts_size.$font-base;
+        font-weight     : fonts_weight.$weight-base;
     }
 
     & > a {
