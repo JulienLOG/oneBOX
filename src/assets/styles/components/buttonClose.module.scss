@@ -7,15 +7,9 @@
     display                 : flex;
     align-items             : center;
     gap                     : 0.5rem;
-    padding                 : 4px 1rem 4px 4px;
+    padding                 : 4px;
     border-radius           : 2px;
-    border                  : 2px solid utils_colors.$mono-300;
-    background-color        : utils_colors.$mono-300;
-    @include                fonts_family.font-primary(fonts_size.$font-2xs, fonts_weight.$weight-xl, utils_colors.$mono-800);
-    transition              : background-color 0.25s ease;
+    background-color        : utils_colors.$mono-800;
+    @include                fonts_family.font-primary(fonts_size.$font-2xs, fonts_weight.$weight-base, utils_colors.$mono-50);
     cursor                  : pointer;
-}
-
-.buttonClose:hover {
-    background-color        : utils_colors.$mono-50;
 }
