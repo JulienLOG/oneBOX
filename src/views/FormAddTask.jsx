@@ -11,8 +11,10 @@ export default function FormAddTask({ inputName, inputPlaceholder, buttonText, a
 
     return (
         <form className={ styles.formAddTask } onSubmit={ handleSubmit }>
-            <label  htmlFor={ inputName }>{ inputPlaceholder }</label>
-            <input id={ inputName } name={ inputName } type="text" placeholder={ inputPlaceholder }/>
+            <fieldset>
+                <label  htmlFor={ inputName }>{ inputPlaceholder }</label>
+                <input id={ inputName } name={ inputName } type="text" placeholder={ inputPlaceholder }/>
+            </fieldset>
             <button type="submit">{ buttonText }</button>
         </form>
     );

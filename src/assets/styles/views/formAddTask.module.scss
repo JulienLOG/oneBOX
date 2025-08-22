@@ -1,4 +1,5 @@
 @use '../utils/utils_colors.scss' as utils_colors;
+@use '../utils/utils_shadow.scss' as utils_shadow;
 @use '../fonts/fonts_family.scss' as fonts_family;
 @use '../fonts/fonts_weight.scss' as fonts_weight;
 @use '../fonts/fonts_size.scss' as fonts_size;
@@ -11,52 +12,56 @@
     width                   : 100%;
     height                  : 3rem;
 
-    & > label {
-        position            : absolute;
-        inset               : 0px;
-        width               : 60%;
-        margin              : auto;
-        color               : transparent;
-        opacity             : 0;
-        cursor              : pointer;
-    }
-    
-    & > input {
+    & > fieldset {
+        position            : relative;
         width               : 40%;
         height              : 100%;
         padding-left        : 2rem;
-        border-bottom       : 2px solid transparent;
-        background-color    : utils_colors.$mono-300;
-        font-size           : fonts_size.$font-base;
-        font-weight         : fonts_weight.$weight-xl;
-        transition          : border-bottom 200ms ease-in-out, background-color 200ms ease-in-out;
-
-        &::placeholder {
-            color           : utils_colors.$mono-600;
-            transition      : color 200ms ease-in-out;
+        cursor              : pointer;
+        
+        & > label {
+            position            : absolute;
+            inset               : 0px;
+            width               : 100%;
+            color               : transparent;
+            opacity             : 0;
+        }
+        
+        & > input {
+            width               : 100%;
+            height              : 100%;
+            font-size           : fonts_size.$font-base;
+            font-weight         : fonts_weight.$weight-base;
+            color               : utils_colors.$mono-800;
+    
+            &::placeholder {
+                color           : utils_colors.$mono-600;
+            }
+        }
+    
+        &::after {
+            content             : ' ';
+            position            : absolute;
+            bottom              : 0px;
+            left                : 0px;
+            width               : 100%;
+            height              : 4px;
+            border-radius       : 1px;
+            background-color    : utils_colors.$mono-800;
+            @include            utils_shadow.shadow-btn(utils_colors.$mono-800);
         }
     }
 
     & > button {
-        z-index                 : 1111;
         height                  : 100%;
         padding                 : 0px 2rem;
         font-size               : fonts_size.$font-base;
-        font-weight             : fonts_weight.$weight-xl;
+        font-weight             : fonts_weight.$weight-base;
+        color                   : utils_colors.$mono-50;
         border                  : 2px solid transparent;
-        border-radius           : 2px;
-        background-color        : utils_colors.$mono-300;
-        transition              : border 200ms ease-in-out, background-color 200ms ease-in-out;
+        border-radius           : 4px;
+        background-color        : utils_colors.$mono-800;
+        @include                utils_shadow.shadow-btn(utils_colors.$mono-800);
+        cursor                  : pointer;
     }
-}
-
-.formAddTask input:focus,  .formAddTask input:hover { 
-    border-bottom               : 2px solid utils_colors.$mono-300;
-    background-color            : utils_colors.$mono-50;
-    color                       : utils_colors.$mono-900;
-}
-
-.formAddTask > button:active,  .formAddTask > button:hover {
-    border                      : 2px solid utils_colors.$mono-300;
-    background-color            : utils_colors.$mono-50;
 }
