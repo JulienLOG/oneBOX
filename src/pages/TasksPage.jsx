@@ -2,7 +2,7 @@ import { useState } from "react";
 import { taskModel } from "../models/taskModel.js";
 import styles from "../assets/styles/pages/tasksPage.module.scss";
 import ButtonLinkArrow from "../components/ButtonLinkArrow.jsx";
-import AddTaskForm from "../components/AddTaskForm.jsx";
+import FormAddTask from "../components/FormAddTask.jsx";
 import TasksContainerView from "../views/TasksContainerView.jsx";
 import TaskItemView from "../views/TaskItemView.jsx";
 import arrowTop from "../assets/images/btnArrowTop.svg";
@@ -31,7 +31,7 @@ export default function TasksPage() {
                 }
                 </TasksContainerView>
             </div>
-            <AddTaskForm inputName="AddTask" inputPlaceholder="Add a new taks here ..." buttonText="Create" addNewTask={ addNewTask }/>
+            <FormAddTask inputName="AddTask" inputPlaceholder="Add a new taks here ..." buttonText="Create" addNewTask={ addNewTask }/>
         </main>
     );
 };

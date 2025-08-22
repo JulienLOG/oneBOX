@@ -3,7 +3,7 @@
 @use '../fonts/fonts_weight.scss' as fonts_weight;
 @use '../fonts/fonts_size.scss' as fonts_size;
 
-.addTaskForm {
+.formAddTask {
     position                : absolute;
     bottom                  : 4rem;
     display                 : flex;
@@ -51,13 +51,13 @@
     }
 }
 
-.addTaskForm input:focus,  .addTaskForm input:hover { 
+.formAddTask input:focus,  .formAddTask input:hover { 
     border-bottom               : 2px solid utils_colors.$mono-300;
     background-color            : utils_colors.$mono-50;
     color                       : utils_colors.$mono-900;
 }
 
-.addTaskForm > button:active,  .addTaskForm > button:hover {
+.formAddTask > button:active,  .formAddTask > button:hover {
     border                      : 2px solid utils_colors.$mono-300;
     background-color            : utils_colors.$mono-50;
 }

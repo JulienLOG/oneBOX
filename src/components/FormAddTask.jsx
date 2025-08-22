@@ -1,6 +1,6 @@
-import styles from "../assets/styles/components/addTaskForm.module.scss";
+import styles from "../assets/styles/components/formAddTask.module.scss";
 
-export default function AddTaskForm({ inputName, inputPlaceholder, buttonText, addNewTask}) { 
+export default function FormAddTask({ inputName, inputPlaceholder, buttonText, addNewTask}) { 
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -10,7 +10,7 @@ export default function AddTaskForm({ inputName, inputPlaceholder, buttonText, a
     };
 
     return (
-        <form className={ styles.addTaskForm } onSubmit={ handleSubmit }>
+        <form className={ styles.formAddTask } onSubmit={ handleSubmit }>
             <label  htmlFor={ inputName }>{ inputPlaceholder }</label>
             <input id={ inputName } name={ inputName } type="text" placeholder={ inputPlaceholder }/>
             <button type="submit">{ buttonText }</button>
