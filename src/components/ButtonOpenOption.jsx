@@ -7,17 +7,16 @@ export default function ButtonOpenOption({ isOpen, handleToggle }) {
     }
 
     return (
-        <div className={`${ styles.buttonOpenOption } ${ isOpen && styles.buttonOpenOption__isOpen }`} onClick={ handleClick }>
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <div 
+            className={`
+                ${ styles.buttonOpenOption } 
+                ${ isOpen && styles.buttonOpenOption__isOpen }
+            `} 
+            onClick={ handleClick }
+        >
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     );
 };

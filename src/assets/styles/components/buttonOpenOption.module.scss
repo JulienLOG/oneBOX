@@ -2,35 +2,32 @@
 
 .buttonOpenOption {
     display                 : flex;
-    gap                     : 0.75rem;
+    gap                     : 4px;
+    flex-direction          : column;
     justify-content         : center;
     align-items             : center;
-    min-width               : 48px;
-    min-height              : 48px;
+    height                  : 36px;
+    padding                 : 4px;
     border-radius           : 2px;
-    border                  : 2px solid utils_colors.$mono-300;
-    background-color        : utils_colors.$mono-300;
-    transition              : border 0.25s ease, background-color 0.25s ease;
-
-    & div {
-        display             : flex;
-        justify-content     : center;
-        gap                 : 0.4rem;
-        flex-direction      : column;
-        height              : 100%;
-    }
+    border                  : 2px solid transparent;
+    background-color        : utils_colors.$mono-800;
+    transition              : all 0.2s ease;
+    cursor                  : pointer;
 
     & span {
         display             : inline-block;
-        width               : 4px;
-        height              : 4px;
+        width               : 2px;
+        height              : 2px;
         border-radius       : 1px;
-        transform           : rotate(45deg);
-        background-color    : utils_colors.$mono-900;
+        background-color    : utils_colors.$mono-50;
     }
 }
 
 .buttonOpenOption:hover, .buttonOpenOption__isOpen {
-    border                  : 2px solid utils_colors.$mono-300;
+    border-color            : utils_colors.$mono-800;
     background-color        : utils_colors.$mono-50;
+
+    & span {
+        background-color    : utils_colors.$mono-800;
+    }
 }
