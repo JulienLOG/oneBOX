@@ -19,7 +19,7 @@ export default function OptionsCrudView({ id, isOpen, handleToggle, doneTask, ed
         <ul className={ styles.optionsCrudView }>
             <li>
                 <ButtonClose text="Close" handleClose={ handleClose }>
-                    <ButtonKbd text="B" styleMode="white" />
+                    <ButtonKbd text="B" styleMode="white" styleSize="small"/>
                 </ButtonClose>
             </li>
             <li>
