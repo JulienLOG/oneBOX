@@ -1,8 +1,9 @@
 .homePage {
-    position: relative;
+    position            : relative;
     display             : flex;
     flex-direction      : column;
     flex                : 1;
+    justify-content     : space-between;
     padding             : 16px 64px 64px 64px;
 
     & > div {
@@ -29,5 +30,11 @@
             justify-content     : center;
             padding-bottom      : 4rem;
         }
+    }
+
+    & > aside {
+        display             : flex;
+        justify-content     : center;
+        padding-top         : 2rem;
     }
 }

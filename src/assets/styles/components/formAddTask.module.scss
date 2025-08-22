@@ -4,8 +4,7 @@
 @use '../fonts/fonts_size.scss' as fonts_size;
 
 .formAddTask {
-    position                : absolute;
-    bottom                  : 4rem;
+    position                : relative;
     display                 : flex;
     justify-content         : center;
     gap                     : 1rem;

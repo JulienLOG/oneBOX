@@ -5,8 +5,9 @@ import btnArrowRight from "../assets/images/btnArrowRight.svg";
 import btnArrowBottom from "../assets/images/btnArrowBottom.svg";
 import SectionContent from "../components/SectionContent.jsx";
 import CubeContainer from "../components/CubeContainer.jsx";
+import FormAddTask from "../components/FormAddTask.jsx";
 
-export default function HompePage({ children }) { 
+export default function HompePage() { 
 
     return (
         <main className={ styles.homePage }>
@@ -23,6 +24,9 @@ export default function HompePage({ children }) {
                     <ButtonLinkArrow path="/tasks" img={ btnArrowBottom } text="see tasks" position="bottom"/>
                 </div>
             </nav>
+            <aside>
+                <FormAddTask inputName="AddTask" inputPlaceholder="Add a new taks here ..." buttonText="Create" addNewTask={() => {}}/>
+            </aside>
         </main>
     );
-};
+}; 
