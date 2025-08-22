@@ -1,4 +1,4 @@
-import styles from "../assets/styles/components/formAddTask.module.scss";
+import styles from "../assets/styles/views/formAddTask.module.scss";
 
 export default function FormAddTask({ inputName, inputPlaceholder, buttonText, addNewTask}) { 
 

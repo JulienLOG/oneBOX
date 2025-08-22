@@ -5,7 +5,7 @@ import btnArrowRight from "../assets/images/btnArrowRight.svg";
 import btnArrowBottom from "../assets/images/btnArrowBottom.svg";
 import SectionContent from "../components/SectionContent.jsx";
 import CubeContainer from "../components/CubeContainer.jsx";
-import FormAddTask from "../components/FormAddTask.jsx";
+import FormAddTask from "../views/FormAddTask.jsx";
 
 export default function HompePage() { 
 

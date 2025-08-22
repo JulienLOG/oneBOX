@@ -2,7 +2,7 @@ import { useState } from "react";
 import { taskModel } from "../models/taskModel.js";
 import styles from "../assets/styles/pages/tasksPage.module.scss";
 import ButtonLinkArrow from "../components/ButtonLinkArrow.jsx";
-import FormAddTask from "../components/FormAddTask.jsx";
+import FormAddTask from "../views/FormAddTask.jsx";
 import TasksContainerView from "../views/TasksContainerView.jsx";
 import TaskItemView from "../views/TaskItemView.jsx";
 import arrowTop from "../assets/images/btnArrowTop.svg";
