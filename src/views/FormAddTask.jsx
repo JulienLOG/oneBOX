@@ -1,4 +1,5 @@
 import styles from "../assets/styles/views/formAddTask.module.scss";
+import ButtonKbd from "../components/ButtonKbd";
 
 export default function FormAddTask({ inputName, inputPlaceholder, buttonText, addNewTask}) { 
 
@@ -15,7 +16,10 @@ export default function FormAddTask({ inputName, inputPlaceholder, buttonText, a
                 <label  htmlFor={ inputName }>{ inputPlaceholder }</label>
                 <input id={ inputName } name={ inputName } type="text" placeholder={ inputPlaceholder }/>
             </fieldset>
-            <button type="submit">{ buttonText }</button>
+            <button type="submit">
+                { buttonText }
+                <ButtonKbd text="H" styleMode="white" />
+            </button>
         </form>
     );
 };

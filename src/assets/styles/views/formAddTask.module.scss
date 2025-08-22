@@ -53,8 +53,12 @@
     }
 
     & > button {
+        display                 : flex;
+        gap                     : 1rem;
+        justify-content         : space-between;
+        align-items             : center;
         height                  : 100%;
-        padding                 : 0px 2rem;
+        padding                 : 8px 8px 8px 16px;
         font-size               : fonts_size.$font-base;
         font-weight             : fonts_weight.$weight-base;
         color                   : utils_colors.$mono-50;
