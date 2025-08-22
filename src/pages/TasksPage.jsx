@@ -31,7 +31,9 @@ export default function TasksPage() {
                 }
                 </TasksContainerView>
             </div>
-            <FormAddTask inputName="AddTask" inputPlaceholder="Add a new taks here ..." buttonText="Create" addNewTask={ addNewTask }/>
+            <aside>
+                <FormAddTask inputName="AddTask" inputPlaceholder="Add a new taks here ..." buttonText="Create" addNewTask={ addNewTask }/>
+            </aside>
         </main>
     );
 };
