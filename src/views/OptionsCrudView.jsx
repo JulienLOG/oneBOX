@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from "../assets/styles/views/optionsCrudView.module.scss";
-import btnClose from "../assets/images/btnClose.svg";
 import btnSave from "../assets/images/btnSave.svg";
 import btnBack from "../assets/images/btnBack.svg";
 import btnCheck from "../assets/images/btnCheck.svg";
@@ -8,6 +7,7 @@ import btnEdit from "../assets/images/btnEdit.svg";
 import btnBin from "../assets/images/btnBin.svg";
 import ButtonClose from "../components/ButtonClose.jsx";
 import ButtonCrud from "../components/ButtonCrud.jsx";
+import ButtonKbd from "../components/ButtonKbd.jsx";
 
 export default function OptionsCrudView({ id, isOpen, handleToggle, doneTask, editTask, deleteTask }) {
     
@@ -18,7 +18,9 @@ export default function OptionsCrudView({ id, isOpen, handleToggle, doneTask, ed
     return (
         <ul className={ styles.optionsCrudView }>
             <li>
-                <ButtonClose img={ btnClose } text="Close" handleClose={ handleClose } />
+                <ButtonClose text="Close" handleClose={ handleClose }>
+                    <ButtonKbd text="B" styleMode="white" />
+                </ButtonClose>
             </li>
             <li>
                 {
