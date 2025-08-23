@@ -2,11 +2,16 @@
 
 .optionsCrudView {
     display             : flex;
-    gap                 : 0.5rem;
+    gap                 : 4px;
     flex-direction      : column;
-
+    
     & > :nth-child(2) {
-        border-radius   : 2px;
-        border          : 2px solid utils_colors.$mono-300;
+        display             : flex;
+        gap                 : 2px;
+        flex-direction      : column;
+        width               : clamp(10rem, 10vw, 14rem);
+        border-radius       : 2px;
+        border              : 2px solid utils_colors.$mono-800;
+        background-color    : utils_colors.$mono-800;
     }
 }
