@@ -4,4 +4,10 @@
     align-items         : baseline;
     width               : 100%;
     padding             : 2rem 4rem 0px 4rem;
+
+    & > div {
+        display         : flex;
+        gap             : 0.5rem;
+        align-items     : baseline;
+    }
 }

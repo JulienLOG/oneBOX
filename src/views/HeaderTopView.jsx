@@ -7,9 +7,10 @@ export default function HeaderTopView() {
 
     return (
         <header className={ styles.headerTopView }>
-            <ButtonHome path="/" title="oneBOX" author="by julienLOG">
+            <div>
+                <ButtonHome path="/" title="oneBOX" author="by JulienLOG" />
                 <ButtonKbd text="H" />
-            </ButtonHome>
+            </div>
             <NavHeaderView />
         </header>
     );
