@@ -4,7 +4,7 @@ import ButtonDoneCube from "../components/ButtonDoneCube.jsx";
 import TaskItem from "../components/TaskItem.jsx";
 import UpdateTaskForm from "../components/updateTaskForm.jsx";
 import ButtonOpenOption from "../components/ButtonOpenOption.jsx";
-import OptionsCrudView from "../views/OptionsCrudView.jsx";
+import TaskOptionsView from "../views/TaskOptionsView.jsx";
 
 export default function TaskItemView({ id, text, doneTask, edit, editTask, updateTask, deleteTask }) {
 
@@ -26,7 +26,7 @@ export default function TaskItemView({ id, text, doneTask, edit, editTask, updat
             <ButtonOpenOption isOpen={ isOpen } handleToggle={ handleToggle } />
             { 
                 isOpen 
-                    && <OptionsCrudView 
+                    && <TaskOptionsView 
                             id={ id } 
                             isOpen={ isOpen } 
                             handleToggle={ handleToggle } 

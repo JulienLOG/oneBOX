@@ -1,17 +1,17 @@
 import { useState } from "react";
-import styles from "../assets/styles/views/optionsCrudView.module.scss";
+import styles from "../assets/styles/views/taskOptionsView.module.scss";
 import ButtonClose from "../components/ButtonClose.jsx";
 import ButtonCrud from "../components/ButtonCrud.jsx";
 import ButtonKbd from "../components/ButtonKbd.jsx";
 
-export default function OptionsCrudView({ id, isOpen, handleToggle, doneTask, editTask, deleteTask }) {
+export default function TaskOptionsView({ id, isOpen, handleToggle, doneTask, editTask, deleteTask }) {
     
     const [updateSelect, setUpdateSelect] = useState(false);
     const handleToggleUpdateSelect = () => setUpdateSelect(prev => !prev);
     const handleClose = (e) => e && handleToggle(!isOpen);
 
     return (
-        <ul className={ styles.optionsCrudView }>
+        <ul className={ styles.taskOptionsView }>
             <li>
                 <ButtonClose text="Close" handleClose={ handleClose }>
                     <ButtonKbd text="Esc" styleMode="white" optionDisplay={false}/>
