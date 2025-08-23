@@ -27,13 +27,3 @@
     color                   : utils_colors.$mono-800;
 }
 
-.buttonKbd_small {
-    padding                 : 0px 2px;
-    border-radius           : 2px;
-    background-color        : utils_colors.$mono-50;
-    color                   : utils_colors.$mono-800;
-    
-    & > :first-child, & > :last-child { 
-        line-height         : 1rem;
-    }
-}
