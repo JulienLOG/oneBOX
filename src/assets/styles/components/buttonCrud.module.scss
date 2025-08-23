@@ -6,30 +6,27 @@
 .buttonCrud {
     display             : flex;
     gap                 : 0.5rem;
+    justify-content     : space-between;
     align-items         : center;
     width               : 100%;
-    padding             : 0.5rem 2rem 0.5rem 1rem;
+    padding             : 8px 8px 8px 16px;
     border-radius       : 2px;
-    background-color    : utils_colors.$mono-300;
-    @include            fonts_family.font-primary(fonts_size.$font-base, fonts_weight.$weight-md, utils_colors.$mono-800);
-    transition          : background-color 0.25s ease;
-    cursor              : pointer;
-
-    & > :nth-child(1) {
-        display             : inline-block;
-        width               : 4px;
-        height              : 4px;
-        background-color    : utils_colors.$mono-800;
-        color               : transparent;
-        transform           : rotate(45deg)
+    background-color    : utils_colors.$mono-800;
+    
+    & > button {
+        display             : flex;
+        gap                 : 10px;
+        align-items         : center;
+        @include            fonts_family.font-primary(fonts_size.$font-base, fonts_weight.$weight-base, utils_colors.$mono-50);
+        cursor              : pointer;
+        & > span {
+            display             : inline-block;
+            width               : 4px;
+            height              : 4px;
+            border-radius       : 2px;
+            background-color    : utils_colors.$mono-50;
+            color               : transparent;
+            transform           : rotate(45deg)
+        }
     }
-
-    & > img {
-        width               : 14px;
-        height              : 14px
-    }
-}
-
-.buttonCrud:hover {
-    background-color        : utils_colors.$mono-50;
 }
