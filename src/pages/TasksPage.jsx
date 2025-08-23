@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { taskModel } from "../models/taskModel.js";
+import { __task__ } from "../models/Task.js";
 import styles from "../assets/styles/pages/tasksPage.module.scss";
 import ButtonLinkArrow from "../components/ButtonLinkArrow.jsx";
 import FormAddTask from "../views/FormAddTask.jsx";
@@ -11,7 +11,7 @@ export default function TasksPage() {
 
     const [task, setTask] = useState([]);
 
-    const addNewTask = newTask => setTask([...task, taskModel(newTask)]);
+    const addNewTask = newTask => setTask([...task, __task__(newTask)]);
     const doneTask = id => setTask(tasks => tasks.map(itt => itt.id === id ? ({ ...itt, done: !itt.done }) : itt));
     const editTask = id => setTask(tasks => tasks.map(itt => itt.id === id ? ({ ...itt, edit: !itt.edit }) : itt));
     const updateTask = (id, content) => setTask(tasks => tasks.map(itt => itt.id === id ? ({...itt, content: content}) : itt));
