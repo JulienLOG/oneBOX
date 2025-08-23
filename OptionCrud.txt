@@ -1,0 +1,6 @@
+// const [task, setTask] = useState([]);
+    // const addNewTask = newTask => setTask([...task, __task__(newTask)]);
+    // const doneTask = id => setTask(tasks => tasks.map(itt => itt.id === id ? ({ ...itt, done: !itt.done }) : itt));
+    // const editTask = id => setTask(tasks => tasks.map(itt => itt.id === id ? ({ ...itt, edit: !itt.edit }) : itt));
+    // const updateTask = (id, content) => setTask(tasks => tasks.map(itt => itt.id === id ? ({...itt, content: content}) : itt));
+    // const deleteTask = id => setTask([...task].filter( itt => id !== itt.id ));

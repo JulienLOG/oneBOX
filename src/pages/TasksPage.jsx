@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { __task__ } from "../models/Task.js";
+import { ApiTaskContext } from "../context/ApiTaskContext.jsx";
 import styles from "../assets/styles/pages/tasksPage.module.scss";
 import ButtonLinkArrow from "../components/ButtonLinkArrow.jsx";
 import FormAddTask from "../views/FormAddTask.jsx";
@@ -8,15 +9,9 @@ import TaskItemView from "../views/TaskItemView.jsx";
 import arrowTop from "../assets/images/btnArrowTop.svg";
 
 export default function TasksPage() {
-
-    const [task, setTask] = useState([]);
-
-    const addNewTask = newTask => setTask([...task, __task__(newTask)]);
-    const doneTask = id => setTask(tasks => tasks.map(itt => itt.id === id ? ({ ...itt, done: !itt.done }) : itt));
-    const editTask = id => setTask(tasks => tasks.map(itt => itt.id === id ? ({ ...itt, edit: !itt.edit }) : itt));
-    const updateTask = (id, content) => setTask(tasks => tasks.map(itt => itt.id === id ? ({...itt, content: content}) : itt));
-    const deleteTask = id => setTask([...task].filter( itt => id !== itt.id ));
-    console.log(task);
+    
+    const {task, setTask} = useContext(ApiTaskContext);
+    console.log("context from ApiTaskContext :", task, setTask);
 
     return (
         <main className={ styles.tasksPage }>
@@ -32,7 +27,7 @@ export default function TasksPage() {
                 </TasksContainerView>
             </div>
             <aside>
-                <FormAddTask inputName="AddTask" inputPlaceholder="Add a new taks here ..." buttonText="Create" addNewTask={ addNewTask }/>
+                <FormAddTask inputName="AddTask" inputPlaceholder="Add a new taks here ..." buttonText="Create" />
             </aside>
         </main>
     );
