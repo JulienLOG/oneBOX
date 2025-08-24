@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { __task__ } from "../models/Task.js";
+import { taskModel } from "../models/TaskReducer.js";
 import { ApiTaskContext } from "../context/ApiTaskContext.jsx";
 import styles from "../assets/styles/pages/tasksPage.module.scss";
 import ButtonLinkArrow from "../components/ButtonLinkArrow.jsx";
@@ -10,8 +10,8 @@ import arrowTop from "../assets/images/btnArrowTop.svg";
 
 export default function TasksPage() {
     
-    const {task, setTask} = useContext(ApiTaskContext);
-    console.log("context from ApiTaskContext :", task, setTask);
+    const {state : task, actions} = useContext(ApiTaskContext);
+    console.log("context and reducer from ApiTaskContext :", task, actions);
 
     return (
         <main className={ styles.tasksPage }>
