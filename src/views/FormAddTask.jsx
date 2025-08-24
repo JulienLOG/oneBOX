@@ -1,12 +1,12 @@
 import styles from "../assets/styles/views/formAddTask.module.scss";
 import ButtonKbd from "../components/ButtonKbd";
 
-export default function FormAddTask({ inputName, inputPlaceholder, buttonText, addNewTask}) { 
+export default function FormAddTask({ inputName, inputPlaceholder, buttonText, addTask}) { 
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const value = e.target[inputName].value;
-        addNewTask(value);
+        addTask(value);
         e.target[inputName].value = "";
     };
 

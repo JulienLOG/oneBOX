@@ -11,9 +11,6 @@ export default function TaskItemView({ id, text, doneTask, edit, editTask, updat
     const [isOpen, setIsOpen] = useState(false);
     const handleToggle = (bool) => setIsOpen(bool);
     const handleChange = e => e && updateTask(id, e.target.value);
-    console.log("Edit :", edit)
-    console.log("IsOpen :", isOpen)
-
 
     return (
         <li className={ styles.taskItemView }>

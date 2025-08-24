@@ -14,7 +14,6 @@ export function ApiTaskProvider({ children }) {
 		doneTask		: (id) => dispatch({ type: "DONE_TASK", id })
 	};
 
-
 	return (
 		<ApiTaskContext.Provider value={{ state, actions }}>
 			{children}

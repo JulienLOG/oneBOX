@@ -16,18 +16,38 @@ export default function TasksPage() {
     return (
         <main className={ styles.tasksPage }>
             <div>
-                <ButtonLinkArrow path="/" img={ arrowTop } text="Return Top" position="top"/>
+                <ButtonLinkArrow 
+                    path="/" 
+                    img={ arrowTop } 
+                    text="Return Top" 
+                    position="top"
+                />
             </div>
             <div>
                 <TasksContainerView>
-                    { task.length !== 0 ? task.map((itt) => (
-                        <TaskItemView key={itt.id} id={ itt.id } text={ itt.content } doneTask={ doneTask } edit={ itt.edit } editTask={ editTask } updateTask={ updateTask } deleteTask={ deleteTask }/>
-                    )) : <p>Task not found, create a task ! ✍️</p>
+                    { task.length !== 0 
+                        ? task.map((itm) => (
+                            <TaskItemView 
+                                key={itm.id} 
+                                id={ itm.id } 
+                                text={ itm.content } 
+                                edit={ itm.edit } 
+                                doneTask={actions.doneTask} 
+                                editTask={actions.editTask} 
+                                updateTask={actions.updateTask} 
+                                deleteTask={actions.deleteTask}
+                            />)) 
+                        : <p>Task not found, create a task ! ✍️</p>
                 }
                 </TasksContainerView>
             </div>
             <aside>
-                <FormAddTask inputName="AddTask" inputPlaceholder="Add a new taks here ..." buttonText="Create" />
+                <FormAddTask 
+                    inputName="AddTask" 
+                    inputPlaceholder="Add a new taks here ..." 
+                    buttonText="Create" 
+                    addTask={actions.addTask}
+                />
             </aside>
         </main>
     );
